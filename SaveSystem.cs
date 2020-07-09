@@ -14,7 +14,7 @@ public static class SaveSystem
     }
 
     public static T LoadObject<T>(string dataPath) 
-        where T : class
+        //where T : class
     {
         var path = UnityEngine.Application.persistentDataPath + dataPath;
         if (File.Exists(path))
@@ -27,7 +27,8 @@ public static class SaveSystem
         }
         else
         {
-            return null;
+            //return null;
+            return default(T);
         }
     }
 }
